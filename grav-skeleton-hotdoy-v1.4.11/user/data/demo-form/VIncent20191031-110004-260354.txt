@@ -1,0 +1,9 @@
+name: VIncent
+email: vincent@deuxhuithuit.co
+date: '2019-11-13'
+checkboxes: {"checkboxes-great":"great","checkboxes-super":"super"}
+textarea: null
+checkbox: true
+radio: choice-2
+selectbox: option-1
+

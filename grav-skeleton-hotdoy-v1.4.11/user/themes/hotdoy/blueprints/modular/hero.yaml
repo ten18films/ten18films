@@ -1,0 +1,63 @@
+title: hero
+'@extends': modular/modular
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.image:
+              type: filepicker
+              label: Image
+              preview_images: true
+              accept:
+                - .jpg
+                - .png
+                - .svg
+                - .gif
+                - .webp
+
+            header.image_alt:
+              type: text
+              label: Image Alt
+
+            header.image_width:
+              type: range
+              label: Image Width
+              default: 100
+
+            header.video:
+              type: filepicker
+              label: Video
+              preview_images: false
+              accept:
+                - .mp4
+                - .webm
+
+            header.reverse:
+              type: toggle
+              label: Reverse
+              help: Default will position the image on the right side of the module.
+              highlight: 0
+              default: 0
+              options: 
+                0: 'Default'
+                1: 'Reverse'
+
+            header.bg_image:
+              type: filepicker
+              label: Backgroud Image
+              preview_images: true
+              accept:
+                - .jpg
+                - .png
+                - .svg
+                - .gif
+                - .webp
+                
+            header.bg_veil:
+              type: range
+              label: Background Veil
+              default: 0

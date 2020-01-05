@@ -1,0 +1,257 @@
+/*
+###########################################################
+BODY
+###########################################################
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+}
+body.loaded{
+	overflow-y: scroll;
+}
+
+@media (min-width: 735px) {
+	body{
+		overflow-y: scroll;
+	}
+}
+
+::selection {
+	background: var(--bg-color-alt);
+	color: white;
+}
+
+
+
+
+
+/*
+###########################################################
+SECTION WIDTH, GUTTERS, AND RHYTHM
+###########################################################
+*/
+
+.tight{
+	max-width: var(--width-tight);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+}
+
+.site{
+	max-width: var(--width-site);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+}
+
+.full{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--width-full);
+}
+
+.gutter {
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+}
+
+@media (min-width: 735px) {
+	.gutter{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/*
+ALL RHYTHM CLASSES ARE DEPRECATED AND WILL BE DELETED IN FUTURE VERSIONS
+USE MODULAR.CSS INSTEAD.
+*/
+.rhythm-negative,
+.rhythm-header{
+	margin-top: calc(var(--nav-height)*-1);
+}
+
+.rhythm-null{
+	margin-top: 0;
+}
+
+.rhythm-half{
+	margin-top: calc(var(--rhythm)/2);
+}
+
+.rhythm{
+	margin-top: var(--rhythm);
+}
+
+.rhythm-padding{
+	padding-top: var(--rhythm);
+	padding-bottom: var(--rhythm);
+}
+
+
+
+
+
+/*
+###########################################################
+UTILS
+###########################################################
+*/
+
+.landscape,
+.desktop{
+	display: block;
+}
+
+@media (max-width: 735px) {
+	.landscape,
+	.desktop{
+		display: none;
+	}
+}
+
+.portrait,
+.mobile{
+	display: block;
+}
+
+@media (min-width: 735px) {
+	.portrait,
+	.mobile{
+		display: none;
+	}
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	 -khtml-user-select: none; 
+	   -moz-user-select: none; 
+		-ms-user-select: none; 
+			user-select: none; 
+}
+
+.display-none {
+  display: none;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.block{
+	display: block;
+}
+
+.fill{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/*fix for empty p shortcodes tends to leave behind*/
+p:empty{
+	display: none;
+}
+
+
+
+/*
+###########################################################
+MISC ELEMENTS
+###########################################################
+*/
+
+hr{
+	margin-top: var(--rhythm);
+	margin-bottom: var(--rhythm);
+	border: transparent;
+    border-top: 1px solid var(--fg-color);
+    opacity: 0.2;
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}
+
+code{
+	display: inline;
+	background-color: #f7f7f7;
+	color: var(--fg-color);
+	border-radius: 4px;
+	padding: 2px 5px;
+	font-family: Courier New, Courier, monospace; 
+}
+
+#tracking{
+	display: none;
+}
+
+#snipcart{
+	z-index: 9000;
+	position: absolute;
+}
+
+
+
+/*
+###########################################################
+MARKDOWN NOTICES
+###########################################################
+*/
+
+.notices {
+    max-width: var(--width-tight);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2rem;
+	padding: var(--gutter) calc(var(--gutter)*2);
+}
+
+.notices p a{
+	color: inherit;
+	text-decoration: underline;
+}
+
+.notices.yellow {
+    background: #fcf8f2;
+    color: #df8a13;
+}
+
+.notices.red {
+    background: #f443360d;
+    color: #F44336;
+}
+
+.notices.blue {
+    background: #2196f317;
+    color: #2196F3;
+}
+
+.notices.green {
+    background: #00968814;
+    color: #009688;
+}
+
+.notices.dev{
+	font-family: courier;
+	text-align: center;
+	font-weight: bold;
+}

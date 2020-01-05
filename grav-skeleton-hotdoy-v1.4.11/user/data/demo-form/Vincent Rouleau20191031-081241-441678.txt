@@ -1,0 +1,8 @@
+name: 'Vincent Rouleau'
+email: rouleau.vincent@gmail.com
+checkboxes_demo: null
+textarea_demo: fcxvbgdfg
+checkbox: true
+radio_button_demo: choice-1
+selectbox_demo: option-1
+

@@ -1,0 +1,59 @@
+title: map
+'@extends': modular/modular
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            content:
+              unset@: true
+
+            header.media_order:
+              unset@: true 
+
+            header.markers:
+              name: markers
+              type: list
+              style: vertical
+              label: Markers
+              fields:
+
+                .title:
+                  type: text
+                  label: Title
+
+                .lat:
+                  type: text
+                  label: Latitude
+
+                .lng:
+                  type: text
+                  label: Longitude
+
+            header.zoom:
+              type: range
+              label: Zoom
+              default: 15
+              description: '1-World > 5-Landmass > 10-City > 15-Streets > 20-Buildings'
+              help: 'Only used if 1 marker. Outer bounds will be automatically determined otherwise.'
+              validate:
+                min: 1
+                max: 20
+
+        options:
+          fields:
+
+            header.bg_color:
+              unset@: true
+
+            header.fg_color:
+              unset@: true
+
+            header.bg_color_alt:
+              unset@: true
+
+            header.fg_color_alt:
+              unset@: true

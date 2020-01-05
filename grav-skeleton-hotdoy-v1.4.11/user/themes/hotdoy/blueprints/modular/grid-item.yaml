@@ -1,0 +1,13 @@
+title: grid-item
+'@extends': modular/modular
+
+form:
+  fields:
+    tabs:
+      fields:
+     
+        options:
+          fields:
+
+            header.rhythm:
+              unset@: true

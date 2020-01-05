@@ -1,0 +1,9 @@
+name: 'Vincent Rouleau'
+email: rouleau.vincent@gmail.com
+date: '2019-10-10'
+checkboxes: {"checkboxes-great":"great"}
+textarea: 'dsf sdf s'
+checkbox: true
+radio: choice-2
+selectbox: option-1
+

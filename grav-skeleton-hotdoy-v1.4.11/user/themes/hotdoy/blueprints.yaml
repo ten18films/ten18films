@@ -1,0 +1,155 @@
+name: Hotdoy
+version: 1.4.11
+description: Hotdoy starter theme. 
+icon: angellist
+author:
+  name: Hotdoy
+  email: admin@hotdoy.ca
+homepage: https://github.com/hotdoy/grav-theme-hotdoy
+demo: https://hotdoy.ca
+bugs: https://github.com/hotdoy/grav-theme-hotdoy/issues
+readme: https://github.com/hotdoy/grav-theme-hotdoy/blob/develop/README.md
+license: MIT
+
+form:
+  validation: loose
+  fields:
+
+    theme:
+      type: section
+      title: Theme
+
+    meta_theme:
+      type: colorpicker
+      label: Meta Theme
+   
+    bg_color:
+      type: colorpicker
+      label: Background Color
+      default: '#ffffff'
+
+    fg_color:
+      type: colorpicker
+      label: Foreground Color
+      default: '#313131'
+
+    bg_color_alt:
+      type: colorpicker
+      label: Alternate Background Color
+      default: '#009688'
+
+    fg_color_alt:
+      type: colorpicker
+      label: Alternate Foreground Color
+      default: '#ffffff'
+
+    nav_bg_color:
+      type: colorpicker
+      label: Nav Background Color
+
+    nav_fg_color:
+      type: colorpicker
+      label: Nav Foreground Color
+      default: '#313131'
+
+    rhythm:
+      type: text
+      label: Vertical Rhythm
+      default: 8rem
+
+    organization:
+      type: section
+      title: Organization
+
+    org_name:
+      type: text
+      label: Name
+      help: The name by which the organization should be recognized.
+
+    org_logo_url:
+      type: text
+      label: Logo URL
+      help: The absolute path to the organization logo.
+      
+    org_phone_formatted:
+      type: text
+      label: Phone Formatted
+      help: Phone number formatted as an international number.
+
+    org_email:
+      type: text
+      label: Email
+
+    marquee:
+      type: section
+      title: Marquee 
+
+    marquee_content:
+      type: text
+      help: Add a small banner on top of the site-header
+      label: Marquee Content
+
+    marquee_bg:
+      type: colorpicker
+      label: Marquee Background Color
+      default: '#000000'
+
+    marquee_fg:
+      type: colorpicker
+      label: Marquee Foreground color
+      default: '#ffffff'
+
+    analytics:
+      type: section
+      title: Analytics
+
+    google_tracking_id:
+      type: text
+      label: Google Analytics Tracking ID
+
+    tracking:
+      type: toggle
+      label: Send Theme Usage Statistics
+      help: Send information to the dev behind the theme and help him help you. 
+      highlight: 1
+      default: 1
+      options: 
+        0: 'False'
+        1: 'True'
+
+    google_maps:
+      type: section
+      title: Google Maps
+
+    google_maps_api_key:
+      type: text
+      label: Google Maps API Key
+
+    snazzy_maps:
+      type: textarea
+      rows: 13
+      label: Snazzy Maps
+
+    facebook:
+      type: section
+      title: Facebook
+
+    facebook_app_id:
+      type: text
+      label: Facebook App Id
+ 
+    snipcart:
+      type: section
+      title: Snipcart
+
+    snipcart_api_key:
+      type: text
+      label: Snipcart API Key
+
+    price_prefix:
+      type: text
+      label: Price Prefix
+
+    price_suffix:
+      type: text
+      label: Price Suffix

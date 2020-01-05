@@ -1,0 +1,9 @@
+name: 'judith Toutant-Nadeau'
+email: rouleau.vincent@gmail.com
+date: '2019-11-06'
+checkboxes: {"checkboxes-great":"great"}
+textarea: null
+checkbox: false
+radio: choice-1
+selectbox: option-1
+

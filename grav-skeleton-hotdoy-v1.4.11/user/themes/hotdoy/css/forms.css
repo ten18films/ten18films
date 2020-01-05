@@ -1,0 +1,242 @@
+form{
+	transition: all 0.2s;
+}
+
+.form-field{
+	margin-top: 1rem;
+}
+
+form .required{
+	color: #F44336;
+}
+
+form .form-label{
+
+}
+
+
+
+
+
+/*
+###########################################################
+INPUTS & TEXTAREA
+###########################################################
+*/
+form input,
+form select,
+form textarea,
+form input::placeholder,
+form select::placeholder,
+form textarea::placeholder{
+	font-family: var(--font-base);
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+form input::placeholder,
+form select::placeholder,
+form textarea::placeholder,
+form input[type="date"]{
+	color: #b1bbc5;	
+}
+
+form input,
+form select{
+	width: 100%;
+	border: 0;
+	padding: 10px;
+	border: solid #e6edf5 2px;
+	background-color: #f6f9fc;
+    padding: 10px;
+	transition: all 0.2s;
+	border-radius: 4px;
+}
+
+form textarea{
+	width: 100%;
+	height: 150px;
+	max-width: 100%;
+	min-width: 100%;
+	border: solid #e6edf5 2px;
+	padding: 10px;
+	background-color: #f6f9fc;
+	transition: all 0.2s;
+	border-radius: 4px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+	outline: none;
+	background-color: white;
+	border: solid #e6edf5 2px;
+}
+
+
+
+
+
+/*
+###########################################################
+BUTTONS
+###########################################################
+*/
+
+form button{
+	position: relative;
+	width: 100%;
+	padding: 10px 35px;
+	height: 3rem;
+	background-color: var(--bg-color-alt);
+	color: var(--fg-color-alt);
+	font-size: 16px;
+	margin-top: 2rem;
+	border-radius: 4px;
+	border: 0;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+form button:hover,
+form button:focus {
+	outline: none;
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-1);
+}
+
+form button:active {
+	transform: translateY(-1px);
+}
+
+
+
+
+
+/*
+###########################################################
+CHECKBOXES & RADIO
+###########################################################
+*/
+
+.form-field [data-grav-field="checkboxes"] .checkboxes,
+.form-field [data-grav-field="radio"] .radio{
+	display: flex;
+	padding-top: 0.5rem;
+}
+
+.form-field [data-grav-field="checkboxes"] input[type="checkbox"],
+.form-field [data-grav-field="checkbox"] input[type="checkbox"],
+.form-field [data-grav-field="radio"] input[type="radio"] {
+    display: none;
+}
+
+.form-field [data-grav-field="checkbox"]{
+	margin-top: -28px;
+	margin-bottom: 1rem;	
+}
+
+.form-field [data-grav-field="checkboxes"] label,
+.form-field [data-grav-field="checkbox"] label,
+.form-field [data-grav-field="radio"] label {
+    position: relative;    
+    padding-left: 30px;
+}
+
+.form-field [data-grav-field="checkboxes"] label::before,
+.form-field [data-grav-field="checkboxes"] label::after,
+.form-field [data-grav-field="checkbox"] label::before,
+.form-field [data-grav-field="checkbox"] label::after,
+.form-field [data-grav-field="radio"] label::before,
+.form-field [data-grav-field="radio"] label::after {
+    position: absolute;
+    content: "";
+}
+
+.form-field [data-grav-field="checkboxes"] label::before,
+.form-field [data-grav-field="checkbox"] label::before,
+.form-field [data-grav-field="radio"] label::before {
+    height: 20px;
+    width: 20px;
+    border: solid #e6edf5 2px;
+    left: 0px;
+    background-color: #f6f9fc;
+}
+
+.form-field [data-grav-field="radio"] label::before {
+    border-radius: 50%;
+}
+
+.form-field [data-grav-field="checkboxes"] label::after,
+.form-field [data-grav-field="checkbox"] label::after {
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg) translate(3px, 3px);
+    left: 3px;
+    top: 6px;
+    color: var(--fg-color-alt);
+}
+
+.form-field [data-grav-field="checkbox"] label::after {
+    top: 3px;
+}
+
+.form-field [data-grav-field="radio"] label::after {
+    height: 6px;
+    width: 6px;
+    background-color: var(--fg-color-alt);
+    left: 9px;
+    top: 9px;
+    border-radius: 50%;
+}
+
+.form-field [data-grav-field="checkboxes"] input[type="checkbox"] + label::after,
+.form-field [data-grav-field="checkbox"] input[type="checkbox"] + label::after,
+.form-field [data-grav-field="radio"] input[type="radio"] + label::after {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.form-field [data-grav-field="checkboxes"] input[type="checkbox"]:checked + label::after,
+.form-field [data-grav-field="checkbox"] input[type="checkbox"]:checked + label::after,
+.form-field [data-grav-field="radio"] input[type="radio"]:checked + label::after {
+    opacity: 1;
+}
+
+.form-field [data-grav-field="checkboxes"] input[type="checkbox"]:checked + label::before,
+.form-field [data-grav-field="checkbox"] input[type="checkbox"]:checked + label::before,
+.form-field [data-grav-field="radio"] input[type="radio"]:checked + label::before
+ {
+    background-color: var(--bg-color-alt);
+}
+
+
+
+
+
+/*
+###########################################################
+LOADER
+###########################################################
+*/
+
+form.submitting{
+	opacity: 0.7;
+}
+
+form.submitting button:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: inherit;
+	border-radius: 4px;
+	background-image: url('../images/spinner-white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}

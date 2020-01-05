@@ -1,0 +1,44 @@
+title: modular
+'@extends': modular
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            content:
+              unset@: true
+
+            theme:
+              type: section
+              title: Theme
+
+            header.meta_theme:
+              type: colorpicker
+              label: Meta Theme
+           
+            header.bg_color:
+              type: colorpicker
+              label: Background Color
+
+            header.fg_color:
+              type: colorpicker
+              label: Foreground Color
+
+            header.bg_color_alt:
+              type: colorpicker
+              label: Alternate Background Color
+
+            header.fg_color_alt:
+              type: colorpicker
+              label: Alternate Foreground Color
+
+            header.nav_bg_color:
+              type: colorpicker
+              label: Nav Background Color
+
+            header.nav_fg_color:
+              type: colorpicker
+              label: Nav Foreground Color

@@ -1,0 +1,49 @@
+title: video
+'@extends': modular/modular
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.video:
+              type: filepicker
+              label: Video
+              accept:
+                - .mp4
+
+            header.image:
+              type: filepicker
+              label: Poster
+              preview_images: true
+              accept:
+                - .jpg
+                - .png
+                - .svg
+                - .gif
+                - .webp
+
+            header.loop:
+              type: toggle
+              label: Video Loop 
+              highlight: 1
+              default: 1
+              options: 
+                0: 'False'
+                1: 'True'
+
+            text:
+              type: section
+              title: Content
+
+            header.align_h:
+              type: toggle
+              label: Horizontal Alignment
+              highlight: video__content--h-align-center
+              default: video__content--h-align-center
+              options: 
+                video__content--h-align-left: 'Left'
+                video__content--h-align-center: 'Center'
+                video__content--h-align-right: 'Right'

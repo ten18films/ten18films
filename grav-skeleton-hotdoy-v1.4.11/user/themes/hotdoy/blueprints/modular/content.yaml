@@ -1,0 +1,28 @@
+title: content
+'@extends': modular/modular
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.align:
+              type: toggle
+              label: Text Alignment
+              highlight: content--left
+              default: content--left
+              options: 
+                left: 'Left'
+                center: 'Center'
+                right: 'Right'
+
+            header.width:
+              type: toggle
+              label: Width
+              highlight: tight
+              default: tight
+              options: 
+                tight: 'Tight'
+                site: 'Site'

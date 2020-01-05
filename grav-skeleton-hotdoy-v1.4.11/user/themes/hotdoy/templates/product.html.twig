@@ -1,0 +1,84 @@
+{% extends 'partials/base.html.twig' %}
+{% block js %}
+{{ parent() }}
+{% do assets.addJs('theme://js/product.js', { group:'after' }) %}
+{% endblock %}
+
+{% block page_content %}
+<section class="page__product tight">
+
+	{# header #}
+	{% include 'modular/content.html.twig' with {
+	'content':'<h1>' ~ page.title ~ '</h1>',
+	'align': 'content--center',
+	'content_reveal': 'reveal transition-delay-100',
+	'modular_class': 'm-t_2'}%}
+
+	{# Swiper #}
+	{% if page.header.images %}
+	<div class="rhythm" data-reveal="reveal transition-delay-150 transition-duration-500">
+		<div class="swiper-container product-gallery-top">
+			<div class="swiper-wrapper">
+			{% for item in page.header.images %}
+				{% set image = item.image ? page.media[item.image] %}
+				{% set alt = item.alt %}
+				<div class="swiper-slide">
+					{% include 'partials/img.html.twig' with {'image': image, 'alt': alt, 'class': 'product__image'} %}
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+		<div class="swiper-container product-gallery-thumbs">
+			<div class="swiper-wrapper">
+	    	{% for item in page.header.images %}
+				{% set image = item.image ? page.media[item.image] %}
+				{% set alt = item.alt %}
+				<div class="swiper-slide">
+					<div class="fill">
+						{% include 'partials/img.html.twig' with {'image': image, 'alt': alt, 'class': 'product__image'} %}
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	
+	{# Single Image #}
+	{% elseif page.header.image %}
+	<div class="rhythm" data-reveal="reveal transition-delay-150 transition-duration-500">
+		{% set image = image|default(page.header.image ? page.media[page.header.image]) %}
+		{% include 'partials/img.html.twig' with {'image': image, 'class': 'product__image' } %}
+	</div>
+	{% endif %}
+
+
+	{# price #}
+	<div>
+		{% if theme.snipcart_api_key %}
+		<div class="product__buy__wrapper">
+			<div class="product__buy">
+				<div class="btn btn--solid product__btn">
+					<a class="snipcart-add-item"
+					data-item-id="{{ page.header.id }}"
+					data-item-price="{{ page.header.price }}"
+					data-item-url="{{ page.url }}"
+					data-item-description="{{ page.header.description }}"
+					data-item-image="{{ image.url }}"
+					data-item-name="{{ page.title }}">Buy {{ page.title }}</a>
+				</div>
+				<span class="product__price">{{ theme.price_prefix }} {{ page.header.price|number_format(2) }} {{ theme.price_suffix }}</span>
+			</div>
+		</div>
+		{% else %}
+     	<div class="notices red dev">
+     		<p>Snipcart API Key not found.<br>
+     		Check theme configuration.</p>
+     	</div>
+		{% endif %}
+		
+		{# content #}
+		{% include 'modular/content.html.twig' with{'modular_class': 'product__content', 'width': 'full'} %}
+	</div>
+
+</section>
+{% endblock %}

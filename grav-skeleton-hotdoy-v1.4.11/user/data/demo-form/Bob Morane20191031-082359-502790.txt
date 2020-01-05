@@ -1,0 +1,9 @@
+name: 'Bob Morane'
+email: rouleau.vincent@gmail.com
+date: '2019-11-13'
+checkboxes: {"checkboxes-great":"great"}
+textarea: 'I really like that.'
+checkbox: true
+radio: choice-2
+selectbox: option-3
+

@@ -1,0 +1,90 @@
+title: product
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            section_product:
+              type: section
+              title: Product
+
+            header.id:
+              type: text
+              label: Product ID
+              validate:
+                required: true
+
+            header.image:
+              type: filepicker
+              label: Product Image
+              preview_images: true
+              validate:
+                required: true
+              accept:
+                - .jpg
+
+            header.price:
+              type: number
+              label: Price
+              help: The price of the product. Note that you must use a "." as decimal separator.
+              validate:
+                required: true
+
+            header.description:
+              type: text
+              label: Short Description
+              validate:
+                required: true
+
+            section_images:
+              type: section
+              title: Images
+
+
+            header.images:
+              name: images
+              type: list
+              style: vertical
+              label: Images
+              fields:
+                .image:
+                  type: filepicker
+                  label: Image
+                  preview_images: true
+                  accept:
+                    - .jpg
+                    - .png
+                    - .svg
+                    - .gif
+                    - .webp
+
+                .alt:
+                  type: text
+                  label: Alt
+
+            # section_modular:
+            #   type: section
+            #   title: Modular
+
+            # header.content.items:
+            #   type: text
+            #   label: PLUGIN_ADMIN.ITEMS
+            #   default: '@self.modular'
+            #   size: medium
+
+            # header.content.order.by:
+            #   type: text
+            #   label: PLUGIN_ADMIN.ORDER_BY
+            #   placeholder: folder
+            #   size: small
+
+            # header.content.order.dir:
+            #   type: text
+            #   label: PLUGIN_ADMIN.ORDER
+            #   help: '"desc" or "asc" are valid values'
+            #   placeholder: acs
+            #   size: small

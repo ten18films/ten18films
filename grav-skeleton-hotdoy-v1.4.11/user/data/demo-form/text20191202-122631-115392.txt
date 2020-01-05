@@ -1,0 +1,9 @@
+name: text
+email: text@text.cz
+date: null
+checkboxes: null
+textarea: null
+checkbox: false
+radio: choice-2
+selectbox: option-1
+

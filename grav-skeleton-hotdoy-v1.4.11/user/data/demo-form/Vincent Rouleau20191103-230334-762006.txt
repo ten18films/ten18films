@@ -1,0 +1,9 @@
+name: 'Vincent Rouleau'
+email: rouleau.vincent@gmail.com
+date: '2019-12-18'
+checkboxes: {"checkboxes-doomed":"doomed"}
+textarea: Hola!
+checkbox: true
+radio: choice-2
+selectbox: option-1
+

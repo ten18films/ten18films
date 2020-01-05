@@ -1,0 +1,9 @@
+name: 'Vincent Rouleau'
+email: rouleau.vincent@gmail.com
+date: null
+checkboxes: {"checkboxes-great":"great","checkboxes-super":"super"}
+textarea: null
+checkbox: true
+radio: choice-1
+selectbox: option-1
+

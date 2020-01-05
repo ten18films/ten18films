@@ -1,0 +1,9 @@
+name: parpar
+email: marc.omaly@gmail.com
+date: '2019-12-10'
+checkboxes: {"checkboxes-great":"great","checkboxes-wonderful":"wonderful"}
+textarea: 'il va y avoir une erreur'
+checkbox: true
+radio: choice-2
+selectbox: option-2
+

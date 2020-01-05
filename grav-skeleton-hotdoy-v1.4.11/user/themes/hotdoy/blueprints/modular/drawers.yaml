@@ -1,0 +1,27 @@
+title: drawers
+'@extends': modular/modular
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            content:
+                unset@: true
+
+            header.drawers:
+              name: drawers
+              type: list
+              style: vertical
+              label: Drawers
+              fields:
+                .summary:
+                  type: text
+                  label: Summary
+                .detail:
+                  type: markdown
+                  label: Detail
+                  validate:
+                    type: textarea

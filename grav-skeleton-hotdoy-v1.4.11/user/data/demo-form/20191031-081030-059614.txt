@@ -1,0 +1,8 @@
+input_demo: Vincent
+email: rouleau.vincent@gmail.com
+checkboxes_demo: null
+textarea_demo: null
+checkbox: false
+radio_button_demo: choice-1
+selectbox_demo: option-1
+
